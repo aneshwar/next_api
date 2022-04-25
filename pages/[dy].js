@@ -35,7 +35,7 @@ export default function dy({ data }) {
 }
 export async function getServerSideProps(context) {
   const id = context.params.dy;
-  const res = await fetch(`http://localhost:3000/api/notes/${id}`);
+  const res = await fetch(`https://next-api-sable.vercel.app/api/notes/${id}`);
   const data = await res.json();
   return {
     props: {

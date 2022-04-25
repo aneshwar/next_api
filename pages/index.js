@@ -48,7 +48,7 @@ export default function index({news}) {
   )
 }
 export async function getServerSideProps() {
-    const res = await fetch('http://localhost:3000/api/notes')
+    const res = await fetch('https://next-api-sable.vercel.app/api/notes')
     const news = await res.json()
     return {
       props: {

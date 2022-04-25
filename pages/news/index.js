@@ -35,7 +35,7 @@ if (!news) {
   )
 }
 export async function getServerSideProps() {
-    const res = await fetch('http://localhost:3000/api/notes1')
+    const res = await fetch('https://next-api-sable.vercel.app/api/notes1')
     const news = await res.json()
     return {
       props: {

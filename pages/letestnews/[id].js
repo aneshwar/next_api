@@ -39,7 +39,7 @@ export default function id({data}) {
 export async function getServerSideProps(context) {
     const id = context.query.id
    
-    const res = await fetch(`http://localhost:3000/api/note2/${id}`)
+    const res = await fetch(`https://next-api-sable.vercel.app/api/note2/${id}`)
     const data = await res.json()
     return {
         props: {

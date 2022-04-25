@@ -34,7 +34,7 @@ export default function topheadlines({news}) {
   )
 }
 export async function getServerSideProps() {
-    const res = await fetch('http://localhost:3000/api/top')
+    const res = await fetch('https://next-api-sable.vercel.app/api/top')
     const news = await res.json()
     return {
       props: {
